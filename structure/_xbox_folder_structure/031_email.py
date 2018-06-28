@@ -76,8 +76,8 @@ def getAdjusted():
 
 subject = "Xbox HO " + os.path.basename(os.getcwd())
 to_trans_folder = os.path.normpath(os.getcwd() + "\\02_totrans")
-recipient_to = "Kristyna.Vitekerova@jonckers.com; Tomas.Sagan@jonckers.com"
-recipient_cc = "Maros.Fidrik@jonckers.com; Michal.Stafl@jonckers.com"
+recipient_to = "aaaaa@xxxx.com; bbbb@xxxx.com"
+recipient_cc = "cccc@xxxx.com; dddd@xxxx.com"
 
 text = f"""<html><body><div class=WordSection1>
 <p>Hello,</p>
@@ -87,7 +87,7 @@ text = f"""<html><body><div class=WordSection1>
 <p>Deadline: <b>????</b></p>
 <p>Reference: <br>--insert-reference-table---</p>
 <p>Thanks,</p>
-<p style='margin:0mm;margin-bottom:.0001pt'><b><span lang=IT style='font-size:9.0pt;font-family:\"Verdana\",sans-serif;color:#1E73BE'>Petr SLAVIK&nbsp;</span></b><span lang=IT style='font-size:9.0pt;font-family:\"Verdana\",sans-serif;color:#797979'>|&nbsp;Localization Engineer | JONCKERS | CZ Office </span><span style='font-size:10.0pt;font-family:\"Verdana\",sans-serif;color:gray'>|&nbsp;</span><span style='font-family:\"Verdana\",sans-serif'><a href=\"http://www.jonckers.com/\"><span style='font-size:10.0pt'>www.jonckers.com</span></a></span></p></div></div></body></html>"""
+<p style='margin:0mm;margin-bottom:.0001pt'><b><span lang=IT style='font-size:9.0pt;font-family:\"Verdana\",sans-serif;color:#1E73BE'>Petr SLAVIK&nbsp;</span></b><span lang=IT style='font-size:9.0pt;font-family:\"Verdana\",sans-serif;color:#797979'>|&nbsp;Localization Engineer | JONCKERS | CZ Office </span><span style='font-size:10.0pt;font-family:\"Verdana\",sans-serif;color:gray'>|&nbsp;</span><span style='font-family:\"Verdana\",sans-serif'><a href=\"http://www.joncker.com/\"><span style='font-size:10.0pt'>www.jonckers.com</span></a></span></p></div></div></body></html>"""
 
 print(f"\n\nPreparing HO e-mail\n-------------------\nSubject: {subject} \nTO: {recipient_to}\nCC: {recipient_cc}\n-------------------\nMarkets: {MarketCounter()}\nAdjusted: {getAdjusted()}\n\n")
 print(Fore.LIGHTMAGENTA_EX+"Complete missing data: \nDEADLINE, REFERENCE TABLE")
