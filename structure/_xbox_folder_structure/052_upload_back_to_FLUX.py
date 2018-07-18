@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
 '''This script logs to FLUX web and find flux jobs using reference.xlsx spreadsheet.
-Then it will upload zip files from 05_toASG to correct FLUX task.
+Then it will upload zip files from 05_toASG folder to correct FLUX task.
 '''
 
 dirpath = os.getcwd()
