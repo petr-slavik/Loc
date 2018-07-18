@@ -4,11 +4,11 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
 '''This script will connect to FLUX page using Selenium.
-It will enter login and pasowor.
-Then it will conect to Excel sheet and reads FLUX ID.
-Then it will use these FLUX IDs to find a job.
-It will read minimal/maximal adjuset and number uf markets based on lines of table.
-Then it will download xliffs.zip file, rename it accordind to FLUX ID and move ro project folder '''
+It will enter login and password.
+Then it will open Reference.xlsx Excel sheet and reads FLUX ID.
+Then it will use these FLUX IDs to find a job on FLUX.
+It will read minimal/maximal adjusted and number of markets based on lines of table and write it back to Excel.
+Then it will download xliffs.zip file, rename it accordind to FLUX ID and move to project folder '''
 
 dirpath = os.getcwd()
 book = openpyxl.load_workbook('reference.xlsx')
