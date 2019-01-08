@@ -17,7 +17,7 @@ call TS2015 New-Project ^
   -SourceLanguage "en-US" ^
   -TargetLanguages "cs-CZ da-DK de-DE el-GR en-GB es-ES es-MX fi-FI fr-CA fr-FR hu-HU it-IT ja-JP ko-KR nb-NO nl-NL pl-PL pt-BR pt-PT ru-RU sk-SK sv-SE tr-TR zh-HK zh-TW zh-CN" ^
   -TMLocation "x:\Microsoft\_ASG Digital_account management\TMs" ^
-  -ProjectReference "x:\Microsoft\HB1113293_Digital Other Q2 FY2018\Xbox_Engineering\_trans\20180201_xbox_13194_update\01_prep\01_trados\20180201_xbox_13194_update.sdlproj" ^
+  -ProjectReference "x:\Microsoft\Xbox_Engineering\_trans\20180201_xbox_13194_update\01_prep\01_trados\20180201_xbox_13194_update.sdlproj" ^
   
 call 012_delete_extra_files_from_trados_project.py
 call 013_segment_action.py

@@ -4,11 +4,11 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
 '''This script will connect to FLUX page using Selenium.
-It will enter login and password.
-Then it will open Reference.xlsx Excel sheet and reads FLUX ID.
-Then it will use these FLUX IDs to find a job on FLUX.
-It will read minimal/maximal adjusted and number of markets based on lines of table and write it back to Excel.
-Then it will download xliffs.zip file, rename it accordind to FLUX ID and move to project folder '''
+It will enter login and pasowor.
+Then it will conect to Excel sheet and reads FLUX ID.
+Then it will use these FLUX IDs to find a job.
+It will read minimal/maximal adjuset and number uf markets based on lines of table.
+Then it will download xliffs.zip file, rename it accordind to FLUX ID and move ro project folder '''
 
 dirpath = os.getcwd()
 book = openpyxl.load_workbook('reference.xlsx')
@@ -24,10 +24,10 @@ browser.get('https://flux.olas.net/vendors/tasks')
 time.sleep(3)
 
 login_name = browser.find_element_by_name("username")
-login_name.send_keys('XXXXX.XXXXX@XXXXX.com')
+login_name.send_keys('Kristyna.Vitekerova@jonckers.com')
 login_name.submit()
 login_pswd = browser.find_element_by_name("password")
-login_pswd.send_keys('XXXXX')
+login_pswd.send_keys('1V9lfsSU')
 login_pswd.submit()
 time.sleep(3)
 
@@ -41,6 +41,7 @@ row_number -= 2
 
 pom = 2
 
+xbox_25 = True
 for row in range(row_number):
     job_number = sheet.cell(row=pom, column=1).value
 
@@ -60,7 +61,9 @@ for row in range(row_number):
     browser.get(job_url)
 
     adjusted_table = browser.find_element_by_class_name('model_list').text
-    if "(zh-cn)" in adjusted_table: print("!!!zh-CN present in task, use 26-markets tamplate!!!")
+    if "(zh-cn)" in adjusted_table: 
+        xbox_25 = False
+        print("zh-CN present in task. 26-markets tamplate will be used")
     adjusted_table_list = adjusted_table.splitlines()
     list_of_adjusted = []
     for x in adjusted_table_list[1:]:
@@ -79,6 +82,11 @@ for row in range(row_number):
 
     shutil.move(f"c:\\Users\\SlavP\\Downloads\\xliffs.zip", dirpath+f"\\00_source\\{job_number}.zip")
     pom += 1
+    
+if xbox_25:
+    os.remove("01_CreateProject___XBOX_26.cmd")
+else:
+    os.remove("01_CreateProject___XBOX_25.cmd")
 
 
 book.save('reference.xlsx')

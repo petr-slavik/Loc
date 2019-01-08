@@ -6,6 +6,7 @@ from colorama import Fore
 from colorama import init
 init()
 
+
 #----------------------------- DECLARATION --------------------------
 '''
 Script will take exported files, cut first 6 characters from name (lcid - for example cs-cz_)
@@ -31,7 +32,6 @@ def trunc_6characters():
         for name in files:
             print(Fore.LIGHTYELLOW_EX+"Removing "+name[:6]+" from "+name[6:])
             os.rename(os.path.join(root, name), os.path.join(root, name[6:]))
-
 
 def empty_folders_delete():
     '''This will delete empty folders '''
