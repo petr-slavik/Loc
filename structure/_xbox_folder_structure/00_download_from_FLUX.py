@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
 '''This script will connect to FLUX page using Selenium.
-It will enter login and pasowor.
+It will enter login and password.
 Then it will conect to Excel sheet and reads FLUX ID.
 Then it will use these FLUX IDs to find a job.
 It will read minimal/maximal adjuset and number uf markets based on lines of table.
