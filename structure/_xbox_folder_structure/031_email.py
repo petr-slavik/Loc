@@ -88,8 +88,8 @@ def getAdjusted():
 
 subject = "Xbox HO " + os.path.basename(os.getcwd())
 to_trans_folder = os.path.normpath(os.getcwd() + "\\02_totrans")
-recipient_to = "Kristyna.Vitekerova@jonckers.com; Tomas.Sagan@jonckers.com"
-recipient_cc = "Maros.Fidrik@jonckers.com; Michal.Stafl@jonckers.com; Vladimir.Valastiak@jonckers.com"
+recipient_to = "XXX@jonckers.com; ZZZ@jonckers.com"
+recipient_cc = "YYY@jonckers.com; UUU@jonckers.com"
 
 text = f"""<html><body><div class=WordSection1>
 <p>Hello,</p>
