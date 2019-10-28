@@ -25,10 +25,10 @@ browser.get('https://flux.olas.net/vendors/tasks')
 time.sleep(3)
 
 login_name = browser.find_element_by_name("username")
-login_name.send_keys('Kristyna.Vitekerova@jonckers.com')
+login_name.send_keys('XXX.XXXX@jonckers.com')
 login_name.submit()
 login_pswd = browser.find_element_by_name("password")
-login_pswd.send_keys('1V9lfsSU')
+login_pswd.send_keys('xxxxxx')
 login_pswd.submit()
 time.sleep(3)
 
